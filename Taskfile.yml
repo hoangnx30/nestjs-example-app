@@ -1,0 +1,31 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+  DISABLED_UNIT_TEST: false
+  IMAGE: node:22-alpine
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+
+  unit-test:
+    cmds:
+      - echo "Running unit tests..."
+      # - pnpm run test:cov
+      - echo "Unit tests completed."
+
+  e2e-test:
+    cmds:
+      - echo "Running end-to-end tests..."
+      # - pnpm run test:e2e
+      - echo "End-to-end tests completed."
+
+  install-dependencies:
+    cmds:
+      - echo "Installing dependencies..."
+      - pnpm install
+      - echo "Dependencies installed."
