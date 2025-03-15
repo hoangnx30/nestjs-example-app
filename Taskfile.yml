@@ -11,6 +11,11 @@ tasks:
   default:
     cmds:
       - echo "{{.GREETING}}"
+  lint:
+    cmds:
+      - echo "Running linter..."
+      - pnpm run lint
+      - echo "Linting completed."      
 
   unit-test:
     cmds:
