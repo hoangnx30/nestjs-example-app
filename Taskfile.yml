@@ -5,7 +5,7 @@ version: "3"
 vars:
   GREETING: Hello, World!
   DISABLED_UNIT_TEST: false
-  IMAGE: node:22-alpine
+  IMAGE: hoangnx30/node:22-alpine-build
 
 tasks:
   default:
@@ -15,13 +15,13 @@ tasks:
   unit-test:
     cmds:
       - echo "Running unit tests..."
-      # - pnpm run test:cov
+      - pnpm run test:cov
       - echo "Unit tests completed."
 
   e2e-test:
     cmds:
       - echo "Running end-to-end tests..."
-      # - pnpm run test:e2e
+      - pnpm run test:e2e
       - echo "End-to-end tests completed."
 
   install-dependencies:
